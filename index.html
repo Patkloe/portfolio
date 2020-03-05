@@ -1,48 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-<style>
-.bg{
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- À ajouter pour "injecter" notre fichier CSS -->
+    <style>
+   @keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+@-webkit-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+@-moz-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+        #contentCloud {
+    position: fixed;
+    width:100%;    
+    height: 160px;
+    background-image: linear-gradient(to bottom, #003966, #2b6287, #588da7, #8ab9c6, #c2e6e9);
+    border-bottom: solid 1px #999;
+    box-shadow: #bababa 0px 0px 5px;
+    font-weight: 900;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+    #sun {
+    position: absolute;
+    top: 2em;
+    left: 4em;
+    width: 3.5em;
+    height: 3.5em;
+    background-color : yellow;
+    border-radius: 50%;
+    border: 1px solid #FFFACD;
+    box-shadow: #FFFACD 0px 0px 100px 20px;
+}
+    #cloud1 {
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top:1.5em;
+    font-size: 2em;
+    color: #82d4e2;
+    animation: moveCloud 60s linear infinite;
+    -webkit-animation: moveCloud 60s linear infinite;
+    -moz-animation: moveCloud 60s linear infinite;
+}
+#cloud2 {
+    z-index: 2;
+    position: absolute;
+    left:-20px;
+    top:2em;
+    font-size: 1em;
+    font-weight: 900;
+    color: #666;
+    animation-delay:7s;
+    -webkit-animation-delay:7s;
+    -moz-animation-delay: 7s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud3 {
+    z-index: 1;
+    position: absolute;
+    left:-50px;
+    bottom:.5em;
+    font-size: 2.5em;
+    color: #a8e4ec;    
+    animation: moveCloud 55s ease-out infinite;
+    -webkit-animation: moveCloud 55s ease-out infinite;
+    -moz-animation: moveCloud 55s ease-out infinite;
+}
+#cloud4 {
+    z-index: 2;
+    position: absolute;
+    left:-10px;
+    top:3em;
+    font-size: 2em;
+    font-weight: 900;
+    color: #999;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+    -moz-animation-delay: 1s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud5 {
+    z-index: 2;
+    position: absolute;
+    left:-60px;
+    top:2.8em;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #bababa;
+    animation: moveCloud 70s ease-out infinite;
+    -webkit-animation: moveCloud 70s ease-out infinite;
+    -moz-animation: moveCloud 70s ease-out infinite;
+}
+#cloud6 {
+    z-index: 2;
+    position: absolute;
+    left:-40px;
+    top:0.5em;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #cacaca;
+    animation-delay:4s;
+    -webkit-animation-delay:4s;
+    -moz-animation-delay: 4s;
+    animation: moveCloud 55s ease-in infinite;
+    -webkit-animation: moveCloud 55s ease-in infinite;
+    -moz-animation: moveCloud 55s ease-in infinite;
+}
+    .bg{
     background-color: #000;
-    width:100%;
+    /*width:100%;*/
     height: 100%;
     color :#FFF;
+   /*background-image: url("./images/backg_page.jpg"); */
+    background-image: url("./images/backg_page.jpg");
    }
-   
-</style>
-  <title>Bootstrap Example</title>
+   .menu{
+        z-index: 1;
+        color: #FFF;
+        height: 47px;
+        position: fixed;
+        margin-top: 11%;
+        padding: 0;
+        width: 100%;
+        background-color: #00134d;
+       }
+   .pos{
+        margin-top: 50%;
+        }
+    .posmenu{
+        margin-left: 7%;
+        text-shadow: h5;
+        }
+      .posmenu1{
+        margin-left: 7%;
+        }
+   .lef{
+        margin-left: 29%;
+        padding:0;     
+        }   
+    </style>
+  <title>My Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- À ajouter pour utiliser les icones FontAwesome, lien CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+    <!-- Notre fameux conteneur de l'animation -->
+    <div id="contentCloud">
+        <!-- fichier index.html -->
+<div id="contentCloud">
+  <div id="sun"></div>
+  <i id="cloud1" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud2" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud3" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud4" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud5" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud6" class="fa fa-cloud" aria-hidden="true"></i>
 </div>
-  
+    </div><!-- fin contentCloud-->
+    <div class="jumbotron1 text1-center menu">
+  <span class="posmenu"><b>Patrick Motsebo</b></span><br>
+  <span class="posmenu1">Full Stack Developer</span>
+  </div><!-- fin jumbontron1 menu-->
+<!-- debut bootstrap -->
 <div class="container">
-<div class="row bg">
-Menu row to display here with flex effect, change the background color<br><br><br>
-
-
-</div>
+<div class="row, bg"><!-- debut Menu -- mettre le background image ici-->
+<figure>
+  <img src="./images/backg_page.jpg" style="height:575px title="For my background page">
+  <!--<figcaption >Patrick for my Portfolio</figcaption>-->
+  </figure> 
+  </div> <!-- fin Menu-->
   <div class="row">
-    <div class="col-sm-6">
-      <h3>Column 1</h3>
+    <div class="col-sm-6,lef">
+      <!--<h3 class="lef">Column 1</h3>-->
       <p>This will be the space for the content</p>
       <p>Depending of the menu item, the content will be display here...</p>
+        hgshjshjjh
     </div>
     <div class="col-sm-6">
-      <h3>Column 2</h3>
-      <p> <figure>
-  <img src="./images/Patrick.jpg" title="For my portfolio" style="width:768px" style="height:1024px ">
+    <figure>
+  <img class="lef" src="./images/Patrick.jpg" title="For my portfolio" style="width:768px" style="height:1024px ">
   <figcaption >Patrick for my Portfolio</figcaption>
-  </figure></p>
+  </figure>
     </div>
     <!-- <div class="col-sm-4">
       <h3>Column 3</h3>        
@@ -51,6 +227,5 @@ Menu row to display here with flex effect, change the background color<br><br><b
     </div> -->
   </div>
 </div>
-
 </body>
 </html>
