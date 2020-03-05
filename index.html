@@ -164,11 +164,73 @@
         }
       .posmenu1{
         margin-left: 7%;
+        text-decoration: none;
         }
+   .posmenu1 a:link {
+  text-decoration: none;
+  color: #FFF;
+}
    .lef{
         margin-left: 29%;
         padding:0;     
-        }   
+        }
+     .present{
+          display: flex;
+          } 
+     /* reset our lists to remove bullet points and padding */
+/*.posmenu1, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;*/
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  background-color: #CCC;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #fff /*#C5C5C5*/;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 280px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}  
     </style>
   <title>My Portfolio</title>
   <meta charset="utf-8">
@@ -196,8 +258,14 @@
 </div>
     </div><!-- fin contentCloud-->
     <div class="jumbotron1 text1-center menu">
-  <span class="posmenu"><b>Patrick Motsebo</b></span><br>
+  <span class="posmenu"><b>Patrick Motsebo</b></span>
   <span class="posmenu1">Full Stack Developer</span>
+  <span class="posmenu1"><a href="#">About Me</a></span>
+  <span class="posmenu1"><a href="#">My Projects</a><!--sous menu--></span>
+  <span class="posmenu1"><a href="#">About My Education</a></span>
+  <span class="posmenu1"><a href="#">Contact Me</a></span><br>
+  <span class="posmenu1">Full Stack Developer</span>
+  </span>
   </div><!-- fin jumbontron1 menu-->
 <!-- debut bootstrap -->
 <div class="container">
