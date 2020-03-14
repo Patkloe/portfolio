@@ -1,304 +1,445 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8" />
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- À ajouter pour "injecter" notre fichier CSS -->
-    <style>
-   @keyframes moveCloud {
-    0% {
-        transform: translate(1950px);
-    }
-    100% {
-        transform: translate(-50px);
-    }
+<html>
+	<head>
+        <!-- Content Type Meta tag -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!--Responsive Viewport Meta tag-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+		<title>Todo list app</title>
+
+		<!-- Roboto font embed -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+		<!-- Stylesheets -->
+		<!-- <link rel="stylesheet" type="text/css" href="resources/css/reset.min.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css"> -->
+                <style>
+                html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+margin:0;padding:0;border:0;vertical-align:baseline
 }
-@-webkit-keyframes moveCloud {
-    0% {
-        transform: translate(1950px);
-    }
-    100% {
-        transform: translate(-50px);
-    }
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+display:block
 }
-@-moz-keyframes moveCloud {
-    0% {
-        transform: translate(1950px);
-    }
-    100% {
-        transform: translate(-50px);
-    }
+body,html
+{
+width:100%;height:100%
 }
-        #contentCloud {
-    position: fixed;
-    width:100%;    
-    height: 160px;
-    background-image: linear-gradient(to bottom, #003966, #2b6287, #588da7, #8ab9c6, #c2e6e9);
-    border-bottom: solid 1px #999;
-    box-shadow: #bababa 0px 0px 5px;
-    font-weight: 900;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
+body
+{
+-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:none;margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}ol,ul{list-style:none}hr{border:0;height:1px;background:#ccc
 }
-    #sun {
-    position: absolute;
-    top: 2em;
-    left: 4em;
-    width: 3.5em;
-    height: 3.5em;
-    background-color : yellow;
-    border-radius: 50%;
-    border: 1px solid #FFFACD;
-    box-shadow: #FFFACD 0px 0px 100px 20px;
+blockquote,q{quotes:none
 }
-    #cloud1 {
-    z-index: 1;
-    position: absolute;
-    left:0px;
-    top:1.5em;
-    font-size: 2em;
-    color: #82d4e2;
-    animation: moveCloud 60s linear infinite;
-    -webkit-animation: moveCloud 60s linear infinite;
-    -moz-animation: moveCloud 60s linear infinite;
+blockquote:before,blockquote:after,q:before,q:after
+{
+content:'';content:none}table{border-collapse:collapse;border-spacing:0
+}*{margin:0;padding:0;list-style:none;box-sizing:border-box}
+html,input,select,textarea,button,a
+{
+-webkit-tap-highlight-color:rgba(0,0,0,0)
 }
-#cloud2 {
-    z-index: 2;
-    position: absolute;
-    left:-20px;
-    top:2em;
-    font-size: 1em;
-    font-weight: 900;
-    color: #666;
-    animation-delay:7s;
-    -webkit-animation-delay:7s;
-    -moz-animation-delay: 7s;
-    animation: moveCloud 50s ease-in-out infinite;
-    -webkit-animation: moveCloud 50s ease-in-out infinite;
-    -moz-animation: moveCloud 50s ease-in-out infinite;
-}
-#cloud3 {
-    z-index: 1;
-    position: absolute;
-    left:-50px;
-    bottom:.5em;
-    font-size: 2.5em;
-    color: #a8e4ec;    
-    animation: moveCloud 55s ease-out infinite;
-    -webkit-animation: moveCloud 55s ease-out infinite;
-    -moz-animation: moveCloud 55s ease-out infinite;
-}
-#cloud4 {
-    z-index: 2;
-    position: absolute;
-    left:-10px;
-    top:3em;
-    font-size: 2em;
-    font-weight: 900;
-    color: #999;
-    animation-delay:1s;
-    -webkit-animation-delay:1s;
-    -moz-animation-delay: 1s;
-    animation: moveCloud 50s ease-in-out infinite;
-    -webkit-animation: moveCloud 50s ease-in-out infinite;
-    -moz-animation: moveCloud 50s ease-in-out infinite;
-}
-#cloud5 {
-    z-index: 2;
-    position: absolute;
-    left:-60px;
-    top:2.8em;
-    font-size: 2.5em;
-    font-weight: 900;
-    color: #bababa;
-    animation: moveCloud 70s ease-out infinite;
-    -webkit-animation: moveCloud 70s ease-out infinite;
-    -moz-animation: moveCloud 70s ease-out infinite;
-}
-#cloud6 {
-    z-index: 2;
-    position: absolute;
-    left:-40px;
-    top:0.5em;
-    font-size: 1.8em;
-    font-weight: 900;
-    color: #cacaca;
-    animation-delay:4s;
-    -webkit-animation-delay:4s;
-    -moz-animation-delay: 4s;
-    animation: moveCloud 55s ease-in infinite;
-    -webkit-animation: moveCloud 55s ease-in infinite;
-    -moz-animation: moveCloud 55s ease-in infinite;
-}
-    .bg{
-    background-color: #000;
-    /*width:100%;*/
-    height: 100%;
-    color :#FFF;
-   /*background-image: url("./images/backg_page.jpg"); */
-    background-image: url("./images/backg_page.jpg");
-   }
-   .menu{
-        z-index: 1;
-        color: #FFF;
-        height: 47px;
-        position: fixed;
-        margin-top: 11%;
-        padding: 0;
-        width: 100%;
-        background-color: #00134d;
-       }
-   .pos{
-        margin-top: 50%;
-        }
-    .posmenu{
-        margin-left: 7%;
-        text-shadow: h5;
-        }
-      .posmenu1{
-        margin-left: 7%;
-        text-decoration: none;
-        }
-   .posmenu1 a:link {
-  text-decoration: none;
-  color: #FFF;
-}
-   .posmenu1 a {
-  text-decoration: none;
-  color: #FFF;
-}
-   .lef{
-        margin-left: 29%;
-        padding:0;     
-        }
-     .present{
-          display: flex;
-          } 
-     /* reset our lists to remove bullet points and padding */
-/*.posmenu1, .submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;*/
+                @charset "UTF-8";
+
+body {
+  background: #8c8c8c/*#edf0f1*/;
+  padding: 80px 0 0 0;
 }
 
-/* make ALL links (main and submenu) have padding and background color */
-.mainmenu a {
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+  fill: none;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  background: #2e2eb8/*#25b99a*/;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background:rgba(192,192,192,0.3); /*rgba(255, 255, 255, 0.1);   background for the input zone area*/
+  border-radius: 15px 25px 25px 15px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+
+  position:absolute;
+  top:15px;
+  right:15px;
+  z-index:2;
+
+  border-radius: 15px;
+  background: #fff;
+  border: 0px;
+  box-shadow: 25px;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+
+header button svg .fill {
+  fill: #25b99a;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+
+ul.todo {
+  width: 100%;
+  float: left;
+}
+
+ul.todo li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+  word-break: break-word;
+}
+
+ul.todo li:last-of-type {
+  margin: 0;
+}
+
+ul.todo li .buttons {
+  width: 100px;
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+ul.todo li .buttons button svg {
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -11px 0 0 -11px;
+}
+
+ul.todo li .buttons button.complete svg {
+  border-radius: 11px;
+  border: 1.5px solid #25b99a;
+
+  transition: background 0.2s ease;
+}
+
+ul.todo#completed li .buttons button.complete svg {
+  background: #25b99a;
+  border: 0px;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+  background: rgba(37, 185, 154, 0.75);
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+
+ul.todo li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+  fill: #25b99a;
+}
+
+ul.todo#completed {
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+ul.todo#completed:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 30px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after {
+  content: 'You have nothing to-do! / Vous n avez rien a faire ';
+  margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: 'You have yet to complete any tasks / vous n.avez encore rien accompli.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
   display: block;
-  background-color: #CCC;
-  text-decoration: none;
-  padding: 10px;
-  color: #000;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
 }
 
-/* add hover behaviour */
-.posmenu1 a:hover {
-    text-decoration: none;
+  </style> <!--end of the style here -->
+	</head>
+	<body>
+
+		<header>
+			<input type="text" placeholder="Enter an activity / votre planification.." id="item">
+			<button id="add">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><path class="fill" d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"/></g></svg>
+			</button>
+		</header>
+
+		<div class="container">
+			<!-- Uncompleted tasks -->
+			<ul class="todo" id="todo"></ul>
+
+			<!-- Completed tasks -->
+			<ul class="todo" id="completed"></ul>
+		</div>
+
+		<!-- JavaScripts -->
+		<script>
+               var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')):{
+  todo: [],
+  completed: []
+};
+
+// Remove and complete icons in SVG format
+var removeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><rect class="noFill" width="22" height="22"/><g><g><path class="fill" d="M16.1,3.6h-1.9V3.3c0-1.3-1-2.3-2.3-2.3h-1.7C8.9,1,7.8,2,7.8,3.3v0.2H5.9c-1.3,0-2.3,1-2.3,2.3v1.3c0,0.5,0.4,0.9,0.9,1v10.5c0,1.3,1,2.3,2.3,2.3h8.5c1.3,0,2.3-1,2.3-2.3V8.2c0.5-0.1,0.9-0.5,0.9-1V5.9C18.4,4.6,17.4,3.6,16.1,3.6z M9.1,3.3c0-0.6,0.5-1.1,1.1-1.1h1.7c0.6,0,1.1,0.5,1.1,1.1v0.2H9.1V3.3z M16.3,18.7c0,0.6-0.5,1.1-1.1,1.1H6.7c-0.6,0-1.1-0.5-1.1-1.1V8.2h10.6V18.7z M17.2,7H4.8V5.9c0-0.6,0.5-1.1,1.1-1.1h10.2c0.6,0,1.1,0.5,1.1,1.1V7z"/></g><g><g><path class="fill" d="M11,18c-0.4,0-0.6-0.3-0.6-0.6v-6.8c0-0.4,0.3-0.6,0.6-0.6s0.6,0.3,0.6,0.6v6.8C11.6,17.7,11.4,18,11,18z"/></g><g><path class="fill" d="M8,18c-0.4,0-0.6-0.3-0.6-0.6v-6.8c0-0.4,0.3-0.6,0.6-0.6c0.4,0,0.6,0.3,0.6,0.6v6.8C8.7,17.7,8.4,18,8,18z"/></g><g><path class="fill" d="M14,18c-0.4,0-0.6-0.3-0.6-0.6v-6.8c0-0.4,0.3-0.6,0.6-0.6c0.4,0,0.6,0.3,0.6,0.6v6.8C14.6,17.7,14.3,18,14,18z"/></g></g></g></svg>';
+var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" style="enable-background:new 0 0 22 22;" xml:space="preserve"><rect y="0" class="noFill" width="22" height="22"/><g><path class="fill" d="M9.7,14.4L9.7,14.4c-0.2,0-0.4-0.1-0.5-0.2l-2.7-2.7c-0.3-0.3-0.3-0.8,0-1.1s0.8-0.3,1.1,0l2.1,2.1l4.8-4.8c0.3-0.3,0.8-0.3,1.1,0s0.3,0.8,0,1.1l-5.3,5.3C10.1,14.3,9.9,14.4,9.7,14.4z"/></g></svg>';
+
+renderTodoList();
+
+// User clicked on the add button
+// If there is any text inside the item field, add that text to the todo list
+document.getElementById('add').addEventListener('click', function() {
+  var value = document.getElementById('item').value;
+  if (value) {
+    addItem(value);
+  }
+});
+
+document.getElementById('item').addEventListener('keydown', function (e) {
+  var value = this.value;
+  if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
+    addItem(value);
+  }
+});
+
+function addItem (value) {
+  addItemToDOM(value);
+  document.getElementById('item').value = '';
+
+  data.todo.push(value);
+  dataObjectUpdated();
 }
 
+function renderTodoList() {
+  if (!data.todo.length && !data.completed.length) return;
 
-/* when hovering over a .mainmenu item,
-  display the submenu inside it.
-  we're changing the submenu's max-height from 0 to 200px;
-*/
+  for (var i = 0; i < data.todo.length; i++) {
+    var value = data.todo[i];
+    addItemToDOM(value);
+  }
 
-.posmenu1 li:hover .submenu {
-  display: block;
-  max-height: 280px;
+  for (var j = 0; j < data.completed.length; j++) {
+    var value = data.completed[j];
+    addItemToDOM(value, true);
+  }
 }
 
-/*
-  we now overwrite the background-color for .submenu links only.
-  CSS reads down the page, so code at the bottom will overwrite the code at the top.
-*/
-
-.submenu a {
-  background-color: #999;
+function dataObjectUpdated() {
+  localStorage.setItem('todoList', JSON.stringify(data));
 }
 
-/* hover behaviour for links inside .submenu */
-.submenu a:hover {
-  background-color: #666;
+function removeItem() {
+  var item = this.parentNode.parentNode;
+  var parent = item.parentNode;
+  var id = parent.id;
+  var value = item.innerText;
+
+  if (id === 'todo') {
+    data.todo.splice(data.todo.indexOf(value), 1);
+  } else {
+    data.completed.splice(data.completed.indexOf(value), 1);
+  }
+  dataObjectUpdated();
+
+  parent.removeChild(item);
 }
 
-/* this is the initial state of all submenus.
-  we set it to max-height: 0, and hide the overflowed content.
-*/
-.submenu {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: all 0.5s ease-out;
-}  
-    </style>
-  <title>My Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <!-- À ajouter pour utiliser les icones FontAwesome, lien CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-</head>
-<body>
-    <!-- Notre fameux conteneur de l'animation -->
-    <div id="contentCloud">
-        <!-- fichier index.html -->
-<div id="contentCloud">
-  <div id="sun"></div>
-  <i id="cloud1" class="fa fa-cloud" aria-hidden="true"></i>
-  <i id="cloud2" class="fa fa-cloud" aria-hidden="true"></i>
-  <i id="cloud3" class="fa fa-cloud" aria-hidden="true"></i>
-  <i id="cloud4" class="fa fa-cloud" aria-hidden="true"></i>
-  <i id="cloud5" class="fa fa-cloud" aria-hidden="true"></i>
-  <i id="cloud6" class="fa fa-cloud" aria-hidden="true"></i>
-</div>
-    </div><!-- fin contentCloud-->
-    <div class="jumbotron1 text1-center menu">
-  <span class="posmenu"><b>Patrick Motsebo</b></span>
-  <span class="posmenu1">Welcome to my space</span>
-  <span class="posmenu1"><a href="#">About Me</a></span>
-  <span class="posmenu1"><a href="#">My Projects</a></span><!--sous menu-->
-  </span>
-  <span class="posmenu1"><a href="#">My Education</a></span>
-  <span class="posmenu1"><a href="#">Contact Me</a></span><br>
-  <span class="posmenu1">Full Stack Developer</span>
-  </span>
-  </div><!-- fin jumbontron1 menu-->
-<!-- debut bootstrap -->
-<div class="container">
-<div class="row, bg"><!-- debut Menu -- mettre le background image ici-->
-<figure>
-  <img src="./images/backg_page.jpg" style="height:575px title="For my background page">
-  <!--<figcaption >Patrick for my Portfolio</figcaption>-->
-  </figure> 
-  </div> <!-- fin Menu-->
-  <div class="row">
-    <div class="col-sm-6,lef">
-      <!--<h3 class="lef">Column 1</h3>-->
-      <p>This will be the space for the content</p>
-      <p>Depending of the menu item, the content will be display here...</p>
-        hgshjshjjh
-    </div>
-    <div class="col-sm-6">
-    <figure>
-  <img class="lef" src="./images/Patrick.jpg" title="For my portfolio" style="width:768px" style="height:1024px ">
-  <figcaption >Patrick for my Portfolio</figcaption>
-  </figure>
-    </div>
-    <!-- <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div> -->
-  </div>
-</div>
-</body>
+function completeItem() {
+  var item = this.parentNode.parentNode;
+  var parent = item.parentNode;
+  var id = parent.id;
+  var value = item.innerText;
+
+  if (id === 'todo') {
+    data.todo.splice(data.todo.indexOf(value), 1);
+    data.completed.push(value);
+  } else {
+    data.completed.splice(data.completed.indexOf(value), 1);
+    data.todo.push(value);
+  }
+  dataObjectUpdated();
+
+  // Check if the item should be added to the completed list or to re-added to the todo list
+  var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo');
+
+  parent.removeChild(item);
+  target.insertBefore(item, target.childNodes[0]);
+}
+
+// Adds a new item to the todo list
+function addItemToDOM(text, completed) {
+  var list = (completed) ? document.getElementById('completed'):document.getElementById('todo');
+
+  var item = document.createElement('li');
+  item.innerText = text;
+
+  var buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+
+  var remove = document.createElement('button');
+  remove.classList.add('remove');
+  remove.innerHTML = removeSVG;
+
+  // Add click event for removing the item
+  remove.addEventListener('click', removeItem);
+
+  var complete = document.createElement('button');
+  complete.classList.add('complete');
+  complete.innerHTML = completeSVG;
+
+  // Add click event for completing the item
+  complete.addEventListener('click', completeItem);
+
+  buttons.appendChild(remove);
+  buttons.appendChild(complete);
+  item.appendChild(buttons);
+
+  list.insertBefore(item, list.childNodes[0]);
+}
+               </script>
+	</body>
 </html>
