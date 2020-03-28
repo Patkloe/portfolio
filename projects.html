@@ -223,6 +223,32 @@
   padding: 0;
   margin: 0;*/
 }
+nav { /* define grid nav*/
+  background-color: #ccd9ff;
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.left {/* define grid left*/
+  background-color: #ccd9ff;
+  grid-area: 3 / 1 / 6/ 3;
+  text-align: center;
+  border-radius: 15px;
+  }
+ .typ1{/*format text*/
+     font-family: Arial;
+     font-size: 18px;
+     color: #663300;
+     margin-left: 25px;
+     text-justify: distribute; 
+     text-decoration: none;  
+     }       
+.select {
+    background-color: #fff;   /* active link */
+}
+        
 
 /* make ALL links (main and submenu) have padding and background color */
 .mainmenu a {
@@ -231,6 +257,7 @@
   text-decoration: none;
   padding: 10px;
   color: #000;
+  text-decoration: none;
 }
 
 /* add hover behaviour */
@@ -246,8 +273,15 @@
 
 .posmenu1 li:hover .submenu {
   display: block;
-  max-height: 280px;
+  max-height: 380px;
+  text-decoration: none;
 }
+ .mainmenu li:hover .submenu {
+  display: block;
+  max-height: 380px;
+  text-decoration: none;
+}
+
 
 /*
   we now overwrite the background-color for .submenu links only.
@@ -256,11 +290,13 @@
 
 .submenu a {
   background-color: #999;
+  text-decoration: none;
 }
 
 /* hover behaviour for links inside .submenu */
 .submenu a:hover {
   background-color: #666;
+  text-decoration: none;
 }
 
 /* this is the initial state of all submenus.
@@ -271,9 +307,13 @@
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
 }
+ 
  .voir{
     display: block;
-        }  
+ }
+ .navigation {
+  width:100%;
+}  
     </style>
   <title>My Portfolio</title>
   <meta charset="utf-8">
@@ -324,8 +364,35 @@
     <div class="col-sm-7,lef">
       <!--<h3 class="lef">Column 1</h3>-->
       <p class="lef"><span class="lef"><b>Welcome to my personal page </b></span></p>
-      <span class="lef"> <h2>coming soon</h2></span>
-        test test test test test  test test test test test  test test test test test
+      <span class="lef"> <h2>My projects</h2></span>
+       <!-- test test test test test  test test test test test  test test test test test -->
+         <section class="left">
+      <h2><span class="typ1">Navigation</span></h2>
+        <br>
+        <nav class="navigation">
+  <ul class="mainmenu">
+    <!--<li><span class="typ1"><b class="select"></b></span></li>
+    <li><a href="calendar.html"><span class="typ1"><b>My Calendar</b></span></a></li>-->
+    <li><span class="typ1"><b class="select">Frameworks/Languages</b></span></a></a>
+      <ul class="submenu">
+        <li><a href="#"><span class="typ1">Java</span></a></li>
+        <li><a href="#"><span class="typ1">Python</span></a></li>
+        <li><a href="#"><span class="typ1">Php/Laravel</span></a></li>
+        <li><a href="#"><span class="typ1">C</span></a></li>
+        <li><a href="https://patkloe.github.io/guessing_games/"><span class="typ1">Html/Css/Js/Bootstrap</span></a></li>
+        <li><a href="#"><span class="typ1">Js/flask/sqlite/ajax</span></a></li>
+        <li><a href="https://patkloe.github.io/Todo_list/"><span class="typ1">Responsive Web design</span></a></li>
+         
+      </ul>
+    </li>
+     <!-- <li><a href="https://patkloe.github.io/"><figure>
+             <span class="align"> <img src="./images/github_pict.png" Title="my github page" width="53" height="58" >
+              <!--<figcaption class="typ1"><b>My Github page</b></figcaption>
+           </span></figure></a></li>
+    <li><a href="mailto:motsebo@gmail.com?Subject=Hello"><span class="typ1"><b>Keep Connected</b></span></a></li>-->
+  </ul>
+</nav>
+    </section>
      <!--        
        Focused on updating my skills to provide Customer's satisfaction<br>
       Please visit different pages to know more about Me.<br>
