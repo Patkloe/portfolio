@@ -241,8 +241,9 @@ nav { /* define grid nav*/
      font-family: Arial;
      font-size: 18px;
      color: #663300;
-     margin-left: 25px;
-     text-justify: distribute; 
+     /*margin-left: 15px
+     text-justify: distribute;*/
+     text-align: justify;
      text-decoration: none;  
      }       
 .select {
@@ -258,6 +259,8 @@ nav { /* define grid nav*/
   padding: 10px;
   color: #000;
   text-decoration: none;
+   margin-left: 2%;
+   border: 0;
 }
 
 /* add hover behaviour */
@@ -273,13 +276,14 @@ nav { /* define grid nav*/
 
 .posmenu1 li:hover .submenu {
   display: block;
-  max-height: 380px;
+  max-height: 480px;
   text-decoration: none;
 }
  .mainmenu li:hover .submenu {
   display: block;
-  max-height: 540px;
+  max-height: 615px;
   text-decoration: none;
+   
 }
 
 
@@ -291,7 +295,8 @@ nav { /* define grid nav*/
 .submenu a {
   background-color: #999;
   text-decoration: none;
-}
+ 
+  }
 
 /* hover behaviour for links inside .submenu */
 .submenu a:hover {
@@ -306,6 +311,9 @@ nav { /* define grid nav*/
   overflow: hidden;
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
+  margin-left: 2%;
+  border: 0;
+  text-align: justify;
 }
  
  .voir{
@@ -313,7 +321,10 @@ nav { /* define grid nav*/
  }
  .navigation {
   width:100%;
-}  
+}
+ .justify-image{ text-align: justify;}
+.justify-image img{display:inline-block;}
+/*.justify-image:after{content:""; display: inline-block; width: 100%; height: 0;}*/
     </style>
   <title>My Portfolio</title>
   <meta charset="utf-8">
@@ -380,11 +391,14 @@ nav { /* define grid nav*/
         <li><a href="coming_soon.html"><span class="typ1">Php/Laravel</span></a></li>
         <li><a href="coming_soon.html"><span class="typ1">C</span></a></li>
         <li><a href="https://patkloe.github.io/Responsive-Dashboard/"><span class="typ1">Html/Grid-Css/Js</span></a></li>
+         <li><a href="https://patkloe.github.io/Todo_list/"><span class="typ1">Responsive_Web_design</span></a></li>
         <li><a href="https://patkloe.github.io/guessing_games/"><span class="typ1">Html/Css/Js/Bootstrap</span></a></li>
-        <li><a href="https://patkloe.github.io/Yelp_App1/"><span class="typ1">React.js</span></a></li>
-        <li><a href="vue_pict.html"><span class="typ1">Vue.js</span></a></li>
+        <li class="justify-image"><a href="https://patkloe.github.io/Yelp_App1/"><img  title="React" src="./images/react.jpg" width="19" height="28"><span class="typ1">React.js</span></a></li>
+        <li class="justify-image"><a href="vue_pict.html"><img  title="Vue" src="./images/vue.jpg" width="19" height="28"><span class="typ1">Vue.js</span></a></li>
+      <!-- <li><a href="coming_soon.html"><span class="typ1">Angular.js</span></a></li> -->
+        <li class="justify-image"><a href="coming_soon.html"><img  title="Angular" src="./images/angular.jpg" width="19" height="28"><span class="typ1">Angular.js</span></a></li>
         <li><a href="coming_soon.html"><span class="typ1">Js/flask/sqlite/ajax</span></a></li>
-        <li><a href="https://patkloe.github.io/Todo_list/"><span class="typ1">Responsive Web design</span></a></li>
+        
          
       </ul>
     </li>
