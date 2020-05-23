@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- À ajouter pour "injecter" notre fichier CSS -->
+    <style>
+   @keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+@-webkit-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+@-moz-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+        #contentCloud {
+    position: fixed;
+    width:100%;    
+    height: 160px;
+    background-image: linear-gradient(to bottom, #003966, #2b6287, #588da7, #8ab9c6, #c2e6e9);
+    border-bottom: solid 1px #999;
+    box-shadow: #bababa 0px 0px 5px;
+    font-weight: 900;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+    #sun {
+    position: absolute;
+    top: 2em;
+    left: 4em;
+    width: 3.5em;
+    height: 3.5em;
+    background-color : yellow;
+    border-radius: 50%;
+    border: 1px solid #FFFACD;
+    box-shadow: #FFFACD 0px 0px 100px 20px;
+}
+    #cloud1 {
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top:1.5em;
+    font-size: 2em;
+    color: #82d4e2;
+    animation: moveCloud 60s linear infinite;
+    -webkit-animation: moveCloud 60s linear infinite;
+    -moz-animation: moveCloud 60s linear infinite;
+}
+#cloud2 {
+    z-index: 2;
+    position: absolute;
+    left:-20px;
+    top:2em;
+    font-size: 1em;
+    font-weight: 900;
+    color: #666;
+    animation-delay:7s;
+    -webkit-animation-delay:7s;
+    -moz-animation-delay: 7s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud3 {
+    z-index: 1;
+    position: absolute;
+    left:-50px;
+    bottom:.5em;
+    font-size: 2.5em;
+    color: #a8e4ec;    
+    animation: moveCloud 55s ease-out infinite;
+    -webkit-animation: moveCloud 55s ease-out infinite;
+    -moz-animation: moveCloud 55s ease-out infinite;
+}
+#cloud4 {
+    z-index: 2;
+    position: absolute;
+    left:-10px;
+    top:3em;
+    font-size: 2em;
+    font-weight: 900;
+    color: #999;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+    -moz-animation-delay: 1s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud5 {
+    z-index: 2;
+    position: absolute;
+    left:-60px;
+    top:2.8em;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #bababa;
+    animation: moveCloud 70s ease-out infinite;
+    -webkit-animation: moveCloud 70s ease-out infinite;
+    -moz-animation: moveCloud 70s ease-out infinite;
+}
+#cloud6 {
+    z-index: 2;
+    position: absolute;
+    left:-40px;
+    top:0.5em;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #cacaca;
+    animation-delay:4s;
+    -webkit-animation-delay:4s;
+    -moz-animation-delay: 4s;
+    animation: moveCloud 55s ease-in infinite;
+    -webkit-animation: moveCloud 55s ease-in infinite;
+    -moz-animation: moveCloud 55s ease-in infinite;
+}
+    .bg{
+    background-color: #000;
+    /*width:100%;*/
+    height: 100%;
+    color :#FFF;
+   /*background-image: url("./images/backg_page.jpg"); */
+    background-image: url("./images/backg_page.jpg");
+   }
+   .menu{
+        z-index: 1;
+        color: #FFF;
+        height: 47px;
+        position: fixed;
+        margin-top: 11%;
+        padding: 0;
+        width: 100%;
+        background-color: #00134d;
+       }
+   .pos{
+        margin-top: 50%;
+        }
+    .posmenu{
+        margin-left: 7%;
+        text-shadow: h5;
+        }
+      .posmenu1{
+        margin-left: 7%;
+        text-decoration: none;
+        }
+   .posmenu1 a:link {
+  text-decoration: none;
+  color: #FFF;
+}
+   .posmenu1 a {
+  text-decoration: none;
+  color: #FFF;
+}
+   .lef{
+        font-size: 22px; 
+        font-family: 'Bad Script', cursive;    
+        margin-left: 1%/*29%/;
+        padding:0; 
+        font-family: 'Bad Script', cursive;    
+        }
+   .lef1{
+        margin-top: 25%;
+        margin-left: 29%;
+        padding:0;     
+        }
+   .lef2{
+        margin-top: 30%;
+        margin-left: 20%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 20px;    
+        }
+     .lef3{
+        margin-top: 50%;
+        margin-left: 5%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 22px;
+        text-align: center;
+            
+        }
+        .lef4{
+        margin-top: 50%;
+        margin-left: 10%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 18px;
+        
+            
+        }
+     .lef5{
+            margin-left: 50%;
+        }
+     .present{
+          display: flex;
+          } 
+     /* reset our lists to remove bullet points and padding */
+/*.posmenu1, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;*/
+}
+nav { /* define grid nav*/
+  background-color: #ccd9ff;
+  grid-area: 2 / 1 / 2 / 7;
+  text-align: center;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.left {/* define grid left*/
+  background-color: #ccd9ff;
+  grid-area: 3 / 1 / 6/ 3;
+  text-align: center;
+  border-radius: 15px;
+  }
+ .typ1{/*format text*/
+     font-family: Arial;
+     font-size: 18px;
+     color: #663300;
+     margin-left: 25px;
+     text-justify: distribute; 
+     text-decoration: none;  
+     }       
+.select {
+    background-color: #fff;   /* active link */
+}
+        
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  background-color: #CCC;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* add hover behaviour */
+.posmenu1 a:hover {
+    text-decoration: none;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.posmenu1 li:hover .submenu {
+  display: block;
+  max-height: 380px;
+  text-decoration: none;
+}
+ .mainmenu li:hover .submenu {
+  display: block;
+  max-height: 615px;
+  text-decoration: none;
+}
+
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #999;
+  text-decoration: none;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+  text-decoration: none;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+ 
+ .voir{
+    display: block;
+ }
+ .navigation {
+  width:100%;
+}  
+    </style>
+  <title>My Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <!-- À ajouter pour utiliser les icones FontAwesome, lien CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Notre fameux conteneur de l'animation -->
+    <div id="contentCloud">
+        <!-- fichier index.html -->
+<div id="contentCloud">
+  <div id="sun"></div>
+  <i id="cloud1" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud2" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud3" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud4" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud5" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud6" class="fa fa-cloud" aria-hidden="true"></i>
+</div>
+    </div><!-- fin contentCloud-->
+    <div class="jumbotron1 text1-center menu">
+  <span class="posmenu"><b>Patrick Motsebo</b></span>
+  <span class="posmenu1"><a href="index.html">Welcome to my space</a></span>
+  <span class="posmenu1"><a href="aboutMe.html">About Me</a></span>
+  <span class="posmenu1"><a href="#">My Projects</a></span><!--sous menu-->
+  </span>
+  <span class="posmenu1"><a href="cv/Pmotsebo_web.developer.pdf">My Education</a></span>
+  <span class="posmenu1"><a href="contact.html">Contact Me</a></span><br>
+  <span class="posmenu1">Full Stack Developer</span>
+  </span>
+  </div><!-- fin jumbontron1 menu-->
+<!-- debut bootstrap -->
+<div class="container">
+<div class="row, bg"><!-- debut Menu -- mettre le background image ici-->
+<figure>
+  <img class="lef" src="./images/backg_page.jpg" style="height:575px width= 100%" title="For my background page">
+  <!--<figcaption >Patrick for my Portfolio</figcaption>-->
+  </figure> 
+  </div> <!-- fin Menu-->
+    <script>alert("Development in process");</script> 
+  <div class="row">
+    <div class="col-sm-7, lef">
+      <!--<h3 class="lef">Column 1</h3>-->
+      <p class="lef"><span class="lef"><b>Welcome to my personal page </b></span></p>
+      <span class="lef"> <h2>My projects</h2></span>
+       <!-- test test test test test  test test test test test  test test test test test -->
+         <section class="left">
+      <h2><span class="typ1">Navigation</span></h2>
+        <br>
+        <nav class="navigation">
+  <ul class="mainmenu">
+    <!--<li><span class="typ1"><b class="select"></b></span></li>
+    <li><a href="calendar.html"><span class="typ1"><b>My Calendar</b></span></a></li>-->
+    <li><span class="typ1"><b class="select">Frameworks/Languages</b></span></a></a>
+      <ul class="submenu">
+        <li><a href="coming_soon.html"><span class="typ1">Java</span></a></li><title> a program develop with java</title>
+        <li><a href="coming_soon.html"><span class="typ1">Python</span></a></li>
+        <li><a href="coming_soon.html"><span class="typ1">Php/Laravel</span></a></li>
+        <li><a href="coming_soon.html"><span class="typ1">C</span></a></li>
+        <li><a href="https://patkloe.github.io/Responsive-Dashboard/"><span class="typ1">Html/Grid-Css/Js</span></a></li>
+         <li><a href="https://patkloe.github.io/Todo_list/"><span class="typ1">Responsive_Web_design</span></a></li>
+        <li><a href="https://patkloe.github.io/guessing_games/"><span class="typ1">Html/Css/Js/Bootstrap</span></a></li>
+        <li class="justify-image"><a href="https://patkloe.github.io/Yelp_App1/"><img  title="React" src="./images/react.jpg" width="19" height="28"><span class="typ1">React</span></a></li>
+        <li class="justify-image"><a href="vue_pict.html"><img  title="Vue" src="./images/vue.jpg" width="19" height="28"><span class="typ1">Vue</span></a></li>
+      <!-- <li><a href="coming_soon.html"><span class="typ1">Angular.js</span></a></li> -->
+        <li class="justify-image"><a href="angular_pict.html"><img  title="Angular" src="./images/angular.jpg" width="19" height="28"><span class="typ1">Angular</span></a></li>
+        <li><a href="coming_soon.html"><span class="typ1">Js/flask/sqlite/ajax</span></a></li>
+        
+         
+      </ul>
+    </li>
+     <!-- <li><a href="https://patkloe.github.io/"><figure>
+             <span class="align"> <img src="./images/github_pict.png" Title="my github page" width="53" height="58" >
+              <!--<figcaption class="typ1"><b>My Github page</b></figcaption>
+           </span></figure></a></li>
+    <li><a href="mailto:motsebo@gmail.com?Subject=Hello"><span class="typ1"><b>Keep Connected</b></span></a></li>-->
+  </ul>
+</nav>
+    </section>
+     <!--        
+       Focused on updating my skills to provide Customer's satisfaction<br>
+      Please visit different pages to know more about Me.<br>
+        Patrick M</span>--></p>
+    </div>
+    <div class="col-sm-5">
+    <figure>
+  <img class="lef" src="./images/angular_pict.jpg" title="Project Angular" style="width:768px" style="height:1024px ">
+  <figcaption ><u>® Patrick for my Portfolio 2020</u></figcaption>
+  </figure>
+    </div>
+    <!-- <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div> -->
+  </div>
+</div>
+</body>
+</html>
